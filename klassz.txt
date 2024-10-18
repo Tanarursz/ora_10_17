@@ -1,0 +1,74 @@
+1. Mi az osztály?
+    Az osztály egy objektumorientált programozási (OOP) fogalom, amely lehetővé teszi az adatok és a hozzájuk kapcsolódó funkcionalitás szervezését. Egy osztály olyan tervrajz, amely alapján objektumokat (példányokat) hozunk létre. Az objektum egy adott osztály példánya.
+
+2. Osztályok létrehozása
+    Az osztályokat a class kulcsszóval definiáljuk, majd az osztály neve következik, amely általában nagybetűvel kezdődik.
+
+Példa egy egyszerű osztály létrehozására:
+
+
+class Person:
+    pass
+
+
+
+3. Példányosítás
+Az osztályból objektumot (példányt) hozhatunk létre úgy, hogy meghívjuk az osztályt, mintha függvény lenne.
+
+    person1 = Person()
+4. Konstruktorok (__init__ metódus)
+
+    A __init__ egy speciális metódus, amely automatikusan lefut, amikor egy osztályból új objektumot hozunk létre. Ezt a metódust használhatjuk a kezdeti attribútumok beállítására.
+
+    Példa:
+
+    python
+    Kód másolása
+    class Person:
+        def __init__(self, name, age):
+            self.name = name
+            self.age = age
+
+
+
+    person1 = Person("John", 30)
+    print(person1.name)  
+    print(person1.age)   
+
+5. Attribútumok és metódusok
+    Attribútumok: Az osztály által kezelt adatok (mezők).
+    Metódusok: Az osztály funkcionalitásai (függvények), amelyek az attribútumokkal dolgoznak.
+   
+
+    class Person:
+        def __init__(self, name, age):
+            self.name = name
+            self.age = age
+
+        def greet(self):
+            return f"Hello, my name is {self.name} and I am {self.age} years old."
+
+    person1 = Person("Alice", 25)
+    print(person1.greet())  
+
+
+6. Osztály- és példányattribútumok
+    Példányattribútumok: Minden objektumhoz egyedileg tartoznak.
+    Osztályattribútumok: Az osztályhoz tartoznak, és minden példány megosztja őket.
+
+
+
+    class Dog:
+        species = "Canis familiaris"  # Osztályattribútum
+
+        def __init__(self, name, age):
+            self.name = name  # Példányattribútum
+            self.age = age
+
+    dog1 = Dog("Buddy", 5)
+    dog2 = Dog("Max", 3)
+
+    print(dog1.species)  
+    print(dog2.species)  
+
+
